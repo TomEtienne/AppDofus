@@ -1,6 +1,10 @@
 package view;
 
+import java.awt.BorderLayout;
+
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+
 import model.Personnage;
 
 public class AppView {
@@ -34,7 +38,10 @@ public class AppView {
 	}
 	
 	private void placeComponents() {
-		
+		JPanel p = new JPanel(new BorderLayout()); {
+			
+		}
+		frame.add(p, BorderLayout.NORTH);
 	}
 	
 	private void createController() {
