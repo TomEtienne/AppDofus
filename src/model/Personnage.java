@@ -3,6 +3,7 @@ package model;
 public class Personnage {
 	
 	// Infos Personnage
+	private Classe classe;
 	private String nom;
 	private int pdv;
 	private int pointsActions;
@@ -10,43 +11,51 @@ public class Personnage {
 	private int niveau;
 	private int initiative;
 	
-	// Infos Caractéristiques
-	private int vitalite;
-	private int agilite;
-	private int chance;
-	private int force;
-	private int intelligence;	
-	private int sagesse;
+	// Infos Caracteristiques
+	private int resiNeutre;
+	private int resiForce;
+	private int resiIntelligence;	
+	private int resiChance;
+	private int resiAgilite;
 	
-	public Personnage(String nom, int pdv, int pointsActions, int pointsMouvements,
-			int niveau, int initiative, int vitalite, int agilite, int chance,
-			int force, int intelligence, int sagesse) {
+	public Personnage(Classe classe,String nom, int pdv, int pointsActions, int pointsMouvements,
+			int niveau, int initiative, int resiNeutre, int resiForce,
+			int resiIntelligence, int resiChance, int resiAgilite) {
+		this.classe = classe;
 		this.nom = nom;
 		this.pdv = pdv;
 		this.pointsActions = pointsActions;
 		this.pointsMouvements = pointsMouvements;
 		this.niveau = niveau;
 		this.initiative = initiative;
-		this.vitalite = vitalite;
-		this.agilite = agilite;
-		this.chance = chance;
-		this.force = force;
-		this.intelligence = intelligence;
-		this.sagesse = sagesse;
+		this.resiNeutre = resiNeutre;
+		this.resiForce = resiForce;
+		this.resiIntelligence = resiIntelligence;
+		this.resiChance = resiChance;
+		this.resiAgilite = resiAgilite;
 	}
 	
 	public Personnage() {
+		this.classe = null;
 		this.nom = null;
 		this.pdv = 0;
 		this.pointsActions = 0;
 		this.pointsMouvements = 0;
 		this.niveau = 0;
 		this.initiative = 0;
-		this.vitalite = 0;
-		this.chance = 0;
-		this.force = 0;
-		this.intelligence = 0;
-		this.sagesse = 0;
+		this.resiNeutre = 0;
+		this.resiForce = 0;
+		this.resiIntelligence = 0;
+		this.resiChance = 0;
+		this.resiAgilite = 0;
+	}
+	
+	public Classe getClasse() {
+		return classe;
+	}
+	
+	public void setClasse(Classe classe) {
+		this.classe = classe;
 	}
 
 	public String getNom() {
@@ -97,60 +106,51 @@ public class Personnage {
 		this.initiative = initiative;
 	}
 
-	public int getVitalite() {
-		return vitalite;
+	public int getResiNeutre() {
+		return resiNeutre;
 	}
 
-	public void setVitalite(int vitalite) {
-		this.vitalite = vitalite;
+	public void setResiNeutre(int resiNeutre) {
+		this.resiNeutre = resiNeutre;
 	}
 
-	public int getAgilite() {
-		return agilite;
+	public int getResiForce() {
+		return resiForce;
 	}
 
-	public void setAgilite(int agilite) {
-		this.agilite = agilite;
+	public void setResiForce(int resiForce) {
+		this.resiForce = resiForce;
 	}
 
-	public int getChance() {
-		return chance;
+	public int getResiIntelligence() {
+		return resiIntelligence;
 	}
 
-	public void setChance(int chance) {
-		this.chance = chance;
-	}
-
-	public int getForce() {
-		return force;
-	}
-
-	public void setForce(int force) {
-		this.force = force;
-	}
-
-	public int getIntelligence() {
-		return intelligence;
-	}
-
-	public void setIntelligence(int intelligence) {
-		this.intelligence = intelligence;
-	}
-
-	public int getSagesse() {
-		return sagesse;
-	}
-
-	public void setSagesse(int sagesse) {
-		this.sagesse = sagesse;
+	public void setResiIntelligence(int resiIntelligence) {
+		this.resiIntelligence = resiIntelligence;
 	}
 	
+	public int getResiChance() {
+		return resiChance;
+	}
+
+	public void setResiChance(int resiChance) {
+		this.resiChance = resiChance;
+	}
+
+	public int getResiAgilite() {
+		return resiAgilite;
+	}
+
+	public void setResiAgilite(int resiAgilite) {
+		this.resiAgilite = resiAgilite;
+	}
+
 	@Override
 	public String toString() {
 		return "Personnage [nom=" + nom + ", pdv=" + pdv + ", pointsActions=" + pointsActions + ", pointsMouvements="
-				+ pointsMouvements + ", niveau=" + niveau + ", initiative=" + initiative + ", vitalite=" + vitalite
-				+ ", agilite=" + agilite + ", chance=" + chance + ", force=" + force + ", intelligence=" + intelligence
-				+ ", sagesse=" + sagesse + "]";
+				+ pointsMouvements + ", niveau=" + niveau + ", initiative=" + initiative + ", resiNeutre=" + resiNeutre
+				+ ", resiForce=" + resiForce + ", resiIntelligence=" + resiIntelligence + ", resiChance=" + resiChance
+				+ ", resiAgilite=" + resiAgilite + "]";
 	}
-
 }
