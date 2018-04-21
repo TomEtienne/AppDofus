@@ -40,7 +40,7 @@ public class AppView {
 	
 	private void createModel() {
 		// model = new Personnage();
-		model = new Personnage(Classe.ECAFLIP,"Tom", 3000, 12, 6, 200, 2000, 5, 6, 7, 8, 9);
+		model = new Personnage(Classe.ROUBLARD,"Tom", 3000, 12, 6, 200, 2000, 5, 6, 7, 8, 9);
 		//model = null;
 	}
 	

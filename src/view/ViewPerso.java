@@ -2,16 +2,10 @@ package view;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
-import java.awt.image.BufferedImage;
-import java.io.File;
-
-import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-
 import model.Personnage;
-import sun.applet.Main;
 
 public class ViewPerso extends JPanel {
 	
@@ -27,7 +21,57 @@ public class ViewPerso extends JPanel {
 					case ECAFLIP:
 						r.add(new JLabel(new ImageIcon("resources/ecaflip.png")));
 						break;
-
+					case ENIRIPSA:
+						r.add(new JLabel(new ImageIcon("resources/eniripsa.png")));
+						break;
+					case IOP:
+						r.add(new JLabel(new ImageIcon("resources/iop.png")));
+						break;
+					case CRA:
+						r.add(new JLabel(new ImageIcon("resources/cra.png")));
+						break;
+					case FECA:
+						r.add(new JLabel(new ImageIcon("resources/feca.png")));
+						break;
+					case SACRIEUR:
+						r.add(new JLabel(new ImageIcon("resources/sacrieur.png")));
+						break;
+					case SADIDA:
+						r.add(new JLabel(new ImageIcon("resources/sadida.png")));
+						break;
+					case OSAMODAS:
+						r.add(new JLabel(new ImageIcon("resources/osamodas.png")));
+						break;
+					case ENUTROF:
+						r.add(new JLabel(new ImageIcon("resources/enutrof.png")));
+						break;
+					case SRAM:
+						r.add(new JLabel(new ImageIcon("resources/sram.png")));
+						break;
+					case XELOR:
+						r.add(new JLabel(new ImageIcon("resources/xelor.png")));
+						break;
+					case PANDAWA:
+						r.add(new JLabel(new ImageIcon("resources/pandawa.png")));
+						break;
+					case ROUBLARD:
+						r.add(new JLabel(new ImageIcon("resources/roublard.png")));
+						break;
+					case ZOBAL:
+						r.add(new JLabel(new ImageIcon("resources/zobal.png")));
+						break;
+					case STEAMER:
+						r.add(new JLabel(new ImageIcon("resources/steamer.png")));
+						break;
+					case ELIOTROPE:
+						r.add(new JLabel(new ImageIcon("resources/eliotrope.png")));
+						break;
+					case HUPPERMAGE:
+						r.add(new JLabel(new ImageIcon("resources/huppermage.png")));
+						break;
+					case OUGINAK:
+						r.add(new JLabel(new ImageIcon("resources/ouginak.png")));
+						break;
 					default:
 						break;
 					}
